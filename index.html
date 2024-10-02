@@ -323,8 +323,16 @@
         </div>
     </footer>
 
+//認証
+<script>
+    var username = prompt("Enter username:");
+    var password = prompt("Enter password:");
 
-
+    if (username !== "dancinglico" || password !== "kadai") {
+      alert("Access denied");
+      window.location.href = "https://www.example.com";
+    }
+  </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
