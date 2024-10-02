@@ -206,11 +206,10 @@
 
             <div id="map">
 
-                <iframe
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDqwsSDxXr82bI5zuG7hF-RyHhzeukfSEI&q=Tokyo+Station"
-                allowfullscreen>
-              </iframe>
+                <iframe referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDqwsSDxXr82bI5zuG7hF-RyHhzeukfSEI&q=Tokyo+Station"
+                    allowfullscreen>
+                </iframe>
             </div>
 
             <p class="access-description">JR東京駅丸の内地下中央口改札から出て徒歩3分。<br class="no-pc">雨の日でも濡れずにお越しいただくことができます。</p>
@@ -323,22 +322,60 @@
         </div>
     </footer>
 
-//認証
-<script>
-    var username = prompt("Enter username:");
-    var password = prompt("Enter password:");
 
-    if (username !== "dancinglico" || password !== "kadai") {
-      alert("Access denied");
-      window.location.href = "https://www.example.com";
-    }
-  </script>
+
+    <!-- 認証用-->
+    <!-- オーバーレイ -->
+    <div id="overlay"></div>
+
+    <!-- モーダルの内容 -->
+    <div id="loginModal">
+        <h3>Login</h3>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- JavaScriptを <body> の最後に置いて、ページ読み込み後にモーダルとオーバーレイが表示されるようにする -->
+    <script>
+        // ページが読み込まれたらオーバーレイとモーダルを表示
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('loginModal').style.display = 'block';
+
+        // フォームの送信を処理
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // フォームのデフォルト動作をキャンセル
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // ユーザー名とパスワードの確認
+            if (username === 'dancinglico' && password === 'kadai') {
+                alert('Access granted');
+                // 認証成功後の処理: オーバーレイとモーダルを非表示にする
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('loginModal').style.display = 'none';
+            } else {
+                alert('Access denied');
+                window.location.href = 'https://www.example.com'; // 認証失敗時にリダイレクト
+            }
+        });
+    </script>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
 
 
-    </body>
+</body>
 
 </html>
