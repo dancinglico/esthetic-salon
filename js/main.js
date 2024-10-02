@@ -1,4 +1,6 @@
 
+
+
 // 画面サイズに応じて画像を切り替える関数(Slickメインビジュアル用)
 function updateImages() {
     if (window.innerWidth <= 768) {
@@ -71,12 +73,5 @@ $('.question').click(function () {
     });
 });
 
-//パスワード
-var username = prompt("Enter username:");
-var password = prompt("Enter password:");
 
-if (username !== "dancinglico" || password !== "kadai") {
-  alert("Access denied");
-  window.location.href = "https://www.example.com";
-}
 
