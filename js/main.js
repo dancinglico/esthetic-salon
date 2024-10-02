@@ -71,3 +71,12 @@ $('.question').click(function () {
     });
 });
 
+//パスワード
+var username = prompt("Enter username:");
+var password = prompt("Enter password:");
+
+if (username !== "dancinglico" || password !== "kadai") {
+  alert("Access denied");
+  window.location.href = "https://www.example.com";
+}
+
