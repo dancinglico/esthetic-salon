@@ -980,4 +980,28 @@ footer .footer-copyright {
   footer .footer-copyright {
     font-size: 1.1rem;
   }
+}
+/* オーバーレイのスタイル */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 999; /* モーダルよりも後ろに配置する */
+}
+
+/* モーダルのスタイル */
+#loginModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000; /* オーバーレイの上に表示 */
 }/*# sourceMappingURL=style.css.map */
