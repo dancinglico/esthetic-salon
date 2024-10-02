@@ -168,6 +168,13 @@ header {
     }
 }
 
+  @media screen and (max-width: 1365px) and (min-width: 768px) {
+    .nav-main {
+      font-size:calc(16/1366*100vw); 
+    }
+  }
+
+
 .btn-consultation {
     background-color: $button-color;
     color: white;
@@ -252,6 +259,12 @@ header {
     background-color: white;
     margin: 0;
     /* 余白をリセット */
+
+    @include sp{
+        height: auto;
+        position: static;
+    }
+
 }
 
 .mainvisual {
@@ -263,6 +276,12 @@ header {
     margin: 0;
     /* 余白をリセット */
 
+    @include sp{
+        position: static;
+        height:auto;
+        min-height: 0;
+    }
+
     .slide {
         width: 100%;
         height: 100%;
@@ -270,6 +289,8 @@ header {
         justify-content: center;
         align-items: center;
         margin: 0;
+
+
     }
 
     img {
@@ -310,18 +331,18 @@ header {
 
 @include sp {
     .hero-text {
-        position: absolute;
+        position: relative;
         width: 100%;
         left: 50%;
-        bottom: 12%;
+        bottom: 11%;
         transform: translate(-50%, 0%);
+        margin-top:18px;
         text-align: center;
 
         h1 {
             font-size: 2.8rem;
             line-height: 1.8;
-
-
+            
         }
 
         .btn-consultation {
@@ -333,9 +354,13 @@ header {
     }
 }
 
+
+
+
 //------------魅力--------------------------------
 
 .appeals {
+    position:static;
     display: flex;
     justify-content: space-between;
     padding-top: 60px;
@@ -347,6 +372,10 @@ header {
 
     .appeal {
         width: 20%;
+        display: flex;
+        flex-direction: column; /* 縦方向に配置 */
+        align-items: center; /* 中央に揃える */
+        justify-content: flex-start;
 
         .circle {
             width: 156px;
@@ -401,7 +430,7 @@ header {
         align-items: center;
         padding: 0;
         margin: 0;
-        margin-top: -35px;
+        margin-top: 35px; //appeal
         margin-bottom: 55px;
 
 
@@ -434,6 +463,13 @@ header {
     color: $button-color;
     padding-bottom: 20px;
 }
+
+@media screen and (max-width: 1365px) and (min-width: 768px) {
+    .consultation .big-title {
+      font-size:calc(48/1366*100vw); 
+    }
+  }
+
 
 .consultation {
     background-color: $bg-color;
@@ -1154,3 +1190,30 @@ footer {
 
     }
 }
+
+//認証用
+
+/* オーバーレイのスタイル */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255); 
+    z-index: 999; /* モーダルよりも後ろに配置する */
+  }
+
+  /* モーダルのスタイル */
+  #loginModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000; /* オーバーレイの上に表示 */
+  }

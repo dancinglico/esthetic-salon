@@ -126,6 +126,11 @@ header .header_container {
   opacity: 0.7;
 }
 
+@media screen and (max-width: 1365px) and (min-width: 768px) {
+  .nav-main {
+    font-size: 1.1713030747vw;
+  }
+}
 .btn-consultation {
   background-color: #0097a7;
   color: white;
@@ -198,6 +203,12 @@ header .header_container {
   margin: 0;
   /* 余白をリセット */
 }
+@media screen and (max-width: 767px) {
+  .hero {
+    height: auto;
+    position: static;
+  }
+}
 
 .mainvisual {
   width: 100%;
@@ -207,6 +218,13 @@ header .header_container {
   min-height: 100vh;
   margin: 0;
   /* 余白をリセット */
+}
+@media screen and (max-width: 767px) {
+  .mainvisual {
+    position: static;
+    height: auto;
+    min-height: 0;
+  }
 }
 .mainvisual .slide {
   width: 100%;
@@ -250,11 +268,12 @@ header .header_container {
 
 @media screen and (max-width: 767px) {
   .hero-text {
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 50%;
-    bottom: 12%;
+    bottom: 11%;
     transform: translate(-50%, 0%);
+    margin-top: 18px;
     text-align: center;
   }
   .hero-text h1 {
@@ -269,6 +288,7 @@ header .header_container {
   }
 }
 .appeals {
+  position: static;
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
@@ -279,6 +299,10 @@ header .header_container {
 }
 .appeals .appeal {
   width: 20%;
+  display: flex;
+  flex-direction: column; /* 縦方向に配置 */
+  align-items: center; /* 中央に揃える */
+  justify-content: flex-start;
 }
 .appeals .appeal .circle {
   width: 156px;
@@ -325,7 +349,7 @@ header .header_container {
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-top: -35px;
+    margin-top: 35px;
     margin-bottom: 55px;
   }
   .appeals .appeal {
@@ -349,6 +373,11 @@ header .header_container {
   padding-bottom: 20px;
 }
 
+@media screen and (max-width: 1365px) and (min-width: 768px) {
+  .consultation .big-title {
+    font-size: 3.513909224vw;
+  }
+}
 .consultation {
   background-color: #b5e9ee;
   display: flex;
@@ -980,4 +1009,28 @@ footer .footer-copyright {
   footer .footer-copyright {
     font-size: 1.1rem;
   }
+}
+/* オーバーレイのスタイル */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 999; /* モーダルよりも後ろに配置する */
+}
+
+/* モーダルのスタイル */
+#loginModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000; /* オーバーレイの上に表示 */
 }/*# sourceMappingURL=style.css.map */
