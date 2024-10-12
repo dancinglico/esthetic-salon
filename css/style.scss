@@ -859,6 +859,7 @@ header {
 
         img {
             width: 460px;
+            max-width:none;
             aspect-ratio: 16/9;
             object-fit: cover;
             height: auto;
@@ -884,14 +885,7 @@ header {
 
     }
 
-    .image-box:last-child {
-        @include sp {
-            p {
-                padding: 0 16px;
-                margin-bottom: -10px;
-            }
-        }
-    }
+
 }
 
 .image-box img.fadeInUp {

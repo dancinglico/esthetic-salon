@@ -723,6 +723,7 @@ header .header_logo img {
 }
 .room-images .image-box img {
   width: 460px;
+  max-width: none;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
@@ -743,12 +744,6 @@ header .header_logo img {
     font-size: 1.2rem;
     padding: 0 17px;
     margin-top: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .room-images .image-box:last-child p {
-    padding: 0 16px;
-    margin-bottom: -10px;
   }
 }
 
