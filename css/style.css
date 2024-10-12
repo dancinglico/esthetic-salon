@@ -61,7 +61,6 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 5;
   position: absolute;
-  height: 80px;
 }
 @media screen and (max-width: 767px) {
   header {
@@ -73,7 +72,7 @@ header .header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 0;
   z-index: 10;
 }
 @media screen and (max-width: 767px) {
@@ -83,10 +82,15 @@ header .header_container {
     justify-content: space-between;
   }
 }
+header .header_logo img {
+  height: 80px;
+}
 @media screen and (max-width: 767px) {
   header .header_logo {
-    width: 256px;
     height: auto;
+  }
+  header .header_logo img {
+    height: 50px;
   }
 }
 
@@ -132,7 +136,7 @@ header .header_container {
   }
 }
 .btn-consultation {
-  background-color: #0097a7;
+  background-color: #b1788c;
   color: white;
   font-weight: 500;
   padding: 5px 15px;
@@ -307,7 +311,7 @@ header .header_container {
 .appeals .appeal .circle {
   width: 156px;
   height: 156px;
-  border: 3px solid #0097a7;
+  border: 3px solid #b1788c;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -324,7 +328,7 @@ header .header_container {
   font-size: 2.4rem;
   font-family: "Noto Serif JP";
   font-weight: 700;
-  color: #0097a7;
+  color: #b1788c;
 }
 .appeals .appeal .circle .number {
   display: block;
@@ -332,7 +336,7 @@ header .header_container {
   line-height: 1;
   font-weight: 400;
   font-family: "Noto Sans JP";
-  color: #0097a7;
+  color: #b1788c;
 }
 .appeals .appeal p {
   font-size: 2.4rem;
@@ -369,7 +373,7 @@ header .header_container {
   font-size: 4.8rem;
   font-family: "Noto Serif JP";
   font-weight: 700;
-  color: #0097a7;
+  color: #b1788c;
   padding-bottom: 20px;
 }
 
@@ -379,7 +383,7 @@ header .header_container {
   }
 }
 .consultation {
-  background-color: #b5e9ee;
+  background-color: #deb0c4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -408,18 +412,18 @@ header .header_container {
   line-height: 1.5rem;
 }
 .consultation .btn-consultation {
-  background-color: #0097a7;
+  background-color: #b1788c;
   color: white;
   font-size: 3.2rem;
   line-height: 1;
   border-radius: 10px;
   padding: 23px 120px;
   text-decoration: none;
-  box-shadow: 7px 7px rgb(135, 171, 174);
+  box-shadow: 7px 7px rgb(62, 21, 40);
 }
 .consultation .btn-consultation:active {
   transform: translate(6px, 6px);
-  box-shadow: 1px 1px rgb(135, 171, 174);
+  box-shadow: 1px 1px rgb(62, 21, 40);
 }
 .consultation .cta_arrow {
   margin-left: 20px;
@@ -459,11 +463,11 @@ header .header_container {
     line-height: 1;
     border-radius: 15px;
     padding: 15px 65px;
-    box-shadow: 6px 6px rgb(135, 171, 174);
+    box-shadow: 6px 6px rgb(62, 21, 40);
   }
   .consultation .btn-consultation:active {
     transform: translate(5px, 5px);
-    box-shadow: 1px 1px rgb(135, 171, 174);
+    box-shadow: 1px 1px rgb(62, 21, 40);
   }
   .consultation .cta_arrow {
     margin-left: 15px;
@@ -529,7 +533,7 @@ header .header_container {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #b5e9ee;
+  background-color: #deb0c4;
   z-index: -1;
   padding: 0;
   background-size: 100% 100%;
@@ -563,7 +567,7 @@ header .header_container {
   }
 }
 .feature-content .content-heading {
-  background-color: #0097a7;
+  background-color: #b1788c;
   color: white;
   padding: 10px 20px;
   font-size: 3.2rem;
@@ -652,7 +656,7 @@ header .header_container {
 .pricing-container .pricing-box .pricing-title {
   font-size: 3.6rem;
   line-height: 1.6;
-  background-color: #0097a7;
+  background-color: #b1788c;
   color: white;
   width: 430px;
   font-weight: 700;
@@ -667,7 +671,7 @@ header .header_container {
   font-weight: bold;
   font-family: "Noto Serif JP";
   margin-top: 45px;
-  color: #0097a7;
+  color: #b1788c;
   padding: 10px;
 }
 @media screen and (max-width: 767px) {
@@ -825,7 +829,7 @@ header .header_container {
   font-size: 2.4rem;
 }
 .schedule-table th {
-  background-color: #0097a7;
+  background-color: #b1788c;
   color: white;
 }
 .schedule-table td {
@@ -886,8 +890,8 @@ header .header_container {
 }
 .faq .faq-item .question {
   font-size: inherit;
-  border-bottom: 2px solid #0097a7;
-  color: #0097a7;
+  border-bottom: 2px solid #b1788c;
+  color: #b1788c;
   cursor: pointer;
   position: relative;
   padding-left: 35px;
@@ -908,7 +912,7 @@ header .header_container {
   position: absolute;
   font-family: "Noto Serif JP";
   left: 0;
-  color: #0097a7;
+  color: #b1788c;
   font-weight: 700;
   margin-right: 10px;
   line-height: 1.5;
@@ -923,7 +927,7 @@ header .header_container {
   color: white;
   text-align: center;
   transition: transform 0.3s ease;
-  background-color: #0097a7;
+  background-color: #b1788c;
   width: 40px;
   height: 40px;
 }
@@ -955,7 +959,7 @@ header .header_container {
   left: 0;
   top: 0;
   font-family: "Noto Serif JP";
-  color: #0097a7;
+  color: #b1788c;
   margin-right: 10px;
   font-weight: 700;
   line-height: 1.5;

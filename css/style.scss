@@ -5,8 +5,8 @@
 
 
 //色定義
-$button-color: #0097a7;
-$bg-color: #b5e9ee;
+$button-color: #b1788c;
+$bg-color: #deb0c4;
 $heading-color: #606060;
 
 //ブレークポイントを変数化
@@ -94,7 +94,6 @@ header {
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 5;
     position: absolute;
-    height: 80px;
 
     @include sp {
         position: relative;
@@ -105,7 +104,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 0;
+        padding: 0;
         z-index: 10;
 
         @include sp {
@@ -117,9 +116,15 @@ header {
     }
 
     .header_logo {
+
+        img{
+            height: 80px;
+        }
         @include sp {
-            width: 256px;
             height: auto;
+            img{
+                height: 50px;
+            }
         }
     }
 
@@ -514,11 +519,11 @@ header {
         border-radius: 10px;
         padding: 23px 120px;
         text-decoration: none;
-        box-shadow: 7px 7px rgba(135, 171, 174);
+        box-shadow: 7px 7px rgb(62, 21, 40);
 
         &:active {
             transform: translate(6px, 6px);
-            box-shadow: 1px 1px rgba(135, 171, 174);
+            box-shadow: 1px 1px rgba(62, 21, 40);
         }
     }
 
@@ -570,11 +575,11 @@ header {
             line-height: 1;
             border-radius: 15px;
             padding: 15px 65px;
-            box-shadow: 6px 6px rgba(135, 171, 174);
+            box-shadow: 6px 6px rgba(62, 21, 40);
 
             &:active {
                 transform: translate(5px, 5px);
-                box-shadow: 1px 1px rgba(135, 171, 174);
+                box-shadow: 1px 1px rgba(62, 21, 40);
             }
         }
 
