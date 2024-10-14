@@ -291,6 +291,20 @@ header .header_logo img {
     font-size: 1.8rem;
   }
 }
+.copy h1 {
+  font-family: "Noto Serif JP";
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 60px;
+}
+@media screen and (max-width: 767px) {
+  .copy h1 {
+    font-size: 2rem;
+  }
+}
+
 .appeals {
   position: static;
   display: flex;
@@ -375,6 +389,7 @@ header .header_logo img {
   font-weight: 700;
   color: #b1788c;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1365px) and (min-width: 768px) {
@@ -511,6 +526,7 @@ header .header_logo img {
   font-weight: 400;
   font-family: "Noto Serif JP";
   margin-bottom: 30px;
+  margin-top: 80px;
 }
 @media screen and (max-width: 767px) {
   .feature-number {
@@ -553,6 +569,21 @@ header .header_logo img {
     line-height: 1.2;
     margin-top: 5px;
     margin-bottom: 40px;
+  }
+}
+
+.feature-description {
+  font-family: "Noto Serif JP";
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  margin: 20px;
+}
+@media screen and (max-width: 767px) {
+  .feature-description {
+    font-size: 1.7rem;
   }
 }
 
@@ -600,24 +631,25 @@ header .header_logo img {
 }
 .feature-content .content-list dt {
   background-color: #dddddd;
-  padding: 10px;
+  padding: 40px 10px;
   font-size: 2.4rem;
   text-align: center;
-  height: 72px;
+  height: auto;
   display: block;
 }
 @media screen and (max-width: 767px) {
   .feature-content .content-list dt {
     font-size: 1.2rem;
-    padding: 40px 0;
+    padding: 60px 10px;
     height: auto;
   }
 }
 .feature-content .content-list dd {
   padding-left: 30px;
+  padding: 15px 30px;
   font-size: 1.6rem;
   background-color: #eeeeee;
-  height: 72px;
+  height: auto;
   display: block;
   line-height: 2;
 }
@@ -723,7 +755,7 @@ header .header_logo img {
 }
 .room-images .image-box img {
   width: 460px;
-  max-width: none;
+  max-width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
@@ -967,27 +999,9 @@ header .header_logo img {
   content: "ー";
 }
 
-@media screen and (max-width: 767px) {
-  .faq-item:nth-of-type(1) .question {
-    padding-bottom: 5px;
-    min-height: 50px;
-    margin-top: -10px;
-  }
-}
-
-.faq-item:last-child {
-  margin-bottom: 90px;
-}
-
 footer {
   padding: 40px 0;
   text-align: center;
-}
-@media screen and (max-width: 767px) {
-  footer {
-    padding-top: 40px;
-    padding-bottom: 30px;
-  }
 }
 footer .footer-container {
   max-width: 1200px;
@@ -1008,28 +1022,4 @@ footer .footer-copyright {
   footer .footer-copyright {
     font-size: 1.1rem;
   }
-}
-/* オーバーレイのスタイル */
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  z-index: 999; /* モーダルよりも後ろに配置する */
-}
-
-/* モーダルのスタイル */
-#loginModal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  z-index: 1000; /* オーバーレイの上に表示 */
 }/*# sourceMappingURL=style.css.map */

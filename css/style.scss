@@ -359,7 +359,20 @@ header {
     }
 }
 
+//---copy------
 
+.copy h1{
+    font-family: 'Noto Serif JP';
+    font-size:2.5rem;
+    color:#333;
+    font-weight:400;
+    text-align: center;
+    margin: 40px 60px;
+
+    @include sp{
+        font-size:2rem;
+    }
+}
 
 
 //------------魅力--------------------------------
@@ -467,6 +480,7 @@ header {
     font-weight: 700;
     color: $button-color;
     padding-bottom: 20px;
+    text-align:center;
 }
 
 @media screen and (max-width: 1365px) and (min-width: 768px) {
@@ -632,6 +646,7 @@ header {
     font-weight: 400;
     font-family: 'Noto Serif JP';
     margin-bottom: 30px;
+    margin-top: 80px;
 
     @include sp {
         margin-bottom: 25px;
@@ -675,6 +690,20 @@ header {
         margin-top: 5px;
         margin-bottom: 40px;
 
+    }
+}
+
+.feature-description{
+    font-family: 'Noto Serif JP';
+    font-size:2rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    color:#333;
+    margin:20px;
+
+    @include sp{
+        font-size:1.7rem;
     }
 }
 
@@ -723,15 +752,15 @@ header {
 
         dt {
             background-color: #dddddd;
-            padding: 10px;
+            padding: 40px 10px;
             font-size: 2.4rem;
             text-align: center;
-            height: 72px;
+            height: auto;
             display: block;
 
             @include sp {
                 font-size: 1.2rem;
-                padding: 40px 0;
+                padding: 60px 10px;
                 height: auto;
             }
 
@@ -739,9 +768,10 @@ header {
 
         dd {
             padding-left: 30px;
+            padding: 15px 30px;
             font-size: 1.6rem;
             background-color: #eeeeee;
-            height: 72px;
+            height: auto;
             display: block;
             line-height: 2;
 
@@ -859,7 +889,7 @@ header {
 
         img {
             width: 460px;
-            max-width:none;
+            max-width:100%;
             aspect-ratio: 16/9;
             object-fit: cover;
             height: auto;
@@ -1138,31 +1168,12 @@ iframe{
     }
 }
 
-.faq-item:nth-of-type(1) {
-    .question {
-        @include sp {
-            padding-bottom: 5px;
-            min-height: 50px;
-            margin-top: -10px;
-        }
-    }
-}
-
-.faq-item:last-child {
-
-    margin-bottom: 90px;
-}
 
 //footer
 
 footer {
     padding: 40px 0;
     text-align: center;
-
-    @include sp {
-        padding-top: 40px;
-        padding-bottom: 30px;
-    }
 
     .footer-container {
         max-width: 1200px;
@@ -1189,30 +1200,3 @@ footer {
 
     }
 }
-
-//認証用
-
-/* オーバーレイのスタイル */
-#overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255); 
-    z-index: 999; /* モーダルよりも後ろに配置する */
-  }
-
-  /* モーダルのスタイル */
-  #loginModal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 1000; /* オーバーレイの上に表示 */
-  }
